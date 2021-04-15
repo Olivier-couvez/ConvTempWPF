@@ -1,0 +1,21 @@
+﻿<Window x:Class="convtemp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:convtemp"
+        mc:Ignorable="d"
+        Title="Convertisseur de température" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Convertisseur de température" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="20" Background="#FF70DFEA" Foreground="#FF494545" Width="700"/>
+        <Label Content="Entrez une température en C°" HorizontalAlignment="Left" Margin="50,119,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="20" Background="White" Foreground="#FF70DFEA"/>
+        <Label Content="Température convertie" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="20" Background="#FF4494E4" Foreground="#FFAFDDE2" Width="700"/>
+        <Label Content="Température en F°" HorizontalAlignment="Left" Margin="50,269,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="20" Background="#FF70DFEA" Foreground="#FF494545"/>
+        <Label Content="Température en K°" HorizontalAlignment="Left" Margin="50,320,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="20" Background="#FF70DFEA" Foreground="#FF494545"/>
+        <TextBox x:Name="tempS" HorizontalAlignment="Left" Margin="375,122,0,0" Text="{Binding Path=TempSaisie, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" FontSize="20" />
+        <Label x:Name="convFar" Content="{Binding Path=TempFar , Mode=TwoWay}" HorizontalAlignment="Left" Margin="250,269,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="20" Background="#FF494545" Foreground="#F9C8C8C8" Width="99"/>
+        <Label x:Name="convKel" Content="{Binding Path=TempKel , Mode=TwoWay}" HorizontalAlignment="Left" Margin="250,320,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="20" Background="#FF494545" Foreground="#FFC8C8C8" Width="99"/>
+        <Button x:Name="buttonQuitter" Content="Quitter" HorizontalAlignment="Left" Margin="640,379,0,0" VerticalAlignment="Top" Click="buttonQuitter_Click" FontFamily="Century Gothic" FontSize="20"/>
+
+    </Grid>
+</Window>
